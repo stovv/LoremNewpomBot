@@ -47,7 +47,6 @@ def index(text):
     char_counts = sorted(char_counts.items(), key = lambda x: x[1], reverse=True)
 
     sorted_chars = [char for char, _ in char_counts]
-    # print(sorted_chars)
     char_index = {char: index for index, char in enumerate(sorted_chars)}
     index_char = {v: k for k, v in char_index.items()}
     seq = np.array([char_index[char] for char in text])
